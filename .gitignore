@@ -7,7 +7,6 @@ media/gif/
 data/
 
 # Local config
-.env
 
 # Build output / deps
 frontend/dist/
