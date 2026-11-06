@@ -1,0 +1,24 @@
+# GymShed
+
+> Free, open-source gym & body-weight tracker (AGPL-3.0). Runs as a standalone
+> Android app (sideloaded APK) or self-hosted with Docker (passkey profiles,
+> multi-device sync, PWA). No account required, no cloud, no telemetry.
+
+## Docs
+- [Complete reference](https://gymshed.app/docs.html): every feature, self-hosting, every .env setting, AI Coach, imports (FitNotes/Strong/Hevy/Apple Health), backups, MCP server, troubleshooting
+- [HTTP API](https://gymshed.app/api.html): OpenAPI spec, also at [openapi.yaml](https://gymshed.app/openapi.yaml)
+- [README](https://raw.githubusercontent.com/gymshed/GymShed/main/README.md): project overview in Markdown
+- [Documentation index](https://github.com/gymshed/GymShed/blob/main/docs/README.md): every guide by audience, plus an [FAQ](https://raw.githubusercontent.com/gymshed/GymShed/main/docs/FAQ.md)
+
+## Try & get it
+- [Live demo](https://gymshed.app/demo/): the real app with example data, in the browser
+- [Android APK](https://github.com/gymshed/GymShed/releases/latest): signed, sideloadable, in three sizes (Standard with 180 px animations, Plus with 240 px, HD with 360 px); each has its SHA-256 beside it on the GitHub release
+- [About](https://gymshed.app/about.html): the story and every release
+
+## How it is built
+- Developed with Claude Code (Anthropic's coding agent); changes are reviewed, tested and released by the maintainer. The app itself needs no AI service; the AI coach and MCP server are optional.
+
+## Source & community
+- [GitHub repository](https://github.com/gymshed/GymShed): code, issues, pull requests, releases
+- [GitLab mirror](https://gitlab.com/gymshed/gymshed): CI, APK and image builds
+- [Discord](https://github.com/gymshed/GymShed/discussions): release announcements and self-hosting help

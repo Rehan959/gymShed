@@ -1,0 +1,4 @@
+/* GymShed on the Apple Watch, ru: Info.plist. Written by ios/ci/watch-strings.mjs. */
+
+"NSHealthShareUsageDescription" = "GymShed показывает пульс во время тренировки и рядом с каждым подходом.";
+"NSHealthUpdateUsageDescription" = "GymShed сохраняет тренировки в Apple Здоровье, если вы это включите.";

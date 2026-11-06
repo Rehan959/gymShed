@@ -1,0 +1,107 @@
+/* Easter decoration (seasonal/easter.jsx). Loaded only while the theme shows, and scoped to
+   :root[data-season="easter"] so switching it off mid-session leaves nothing behind.
+   Transforms and opacity only; every animation runs a fixed number of times and stops. */
+
+:root[data-season="easter"]{
+  --ea-1:#9adbe8; --ea-2:#f6d3a7; --ea-3:#c7e5b6;
+  --ea-fur:#8a8f96; --ea-fur-2:#6f747b; --ea-petal:rgba(246,211,167,.8);
+}
+:root[data-season="easter"][data-theme="light"],
+:root[data-season="easter"][data-theme="sepia"]{
+  --ea-1:#43a6bd; --ea-2:#c58a4a; --ea-3:#5e9e4a;
+  --ea-fur:#6f747b; --ea-fur-2:#585d63; --ea-petal:rgba(197,138,74,.5);
+}
+
+[data-season="easter"] .ea-egg{display:block}
+[data-season="easter"] .ea-shell{fill:var(--ea-1)}
+[data-season="easter"] .ea-band{fill:var(--ea-2)}
+[data-season="easter"] .ea-eb .ea-shell{fill:var(--ea-3)}
+[data-season="easter"] .ea-eb .ea-band{fill:var(--ea-2)}
+[data-season="easter"] .ea-eg{fill:var(--ea-3)}
+[data-season="easter"] .ea-bunny{display:block}
+[data-season="easter"] .ea-ear,[data-season="easter"] .ea-body,[data-season="easter"] .ea-head{fill:var(--ea-fur)}
+[data-season="easter"] .ea-tail{fill:var(--ea-fur-2)}
+[data-season="easter"] .ea-eye{fill:var(--ea-fur-2)}
+
+/* ------------------------------------------------- petals + header -- */
+[data-season="easter"] .hdr:has(> .ea-petals){position:relative}
+[data-season="easter"] .hdr:has(> .ea-petals) > :not(.ea-petals){position:relative;z-index:1}
+[data-season="easter"] .ea-petals{position:absolute;inset:-6px 0 -4px;overflow:hidden;pointer-events:none;z-index:0}
+[data-season="easter"] .ea-petal{position:absolute;top:-10px;width:9px;height:7px;border-radius:60% 60% 60% 8%;
+  background:var(--ea-petal);opacity:0;animation:ea-drift 8s linear 1 both}
+[data-season="easter"] .ea-p0{left:8%;animation-delay:.8s}
+[data-season="easter"] .ea-p1{left:30%;animation-delay:2.6s;animation-duration:10s}
+[data-season="easter"] .ea-p2{left:52%;animation-delay:4.2s}
+[data-season="easter"] .ea-p3{left:70%;animation-delay:5.6s;animation-duration:9s}
+[data-season="easter"] .ea-p4{left:88%;animation-delay:6.8s;animation-duration:11s}
+@keyframes ea-drift{
+  0%{opacity:0;transform:translateY(0) rotate(0)}
+  10%{opacity:.9}
+  55%{transform:translateY(10px) rotate(120deg)}
+  86%{opacity:.7}
+  100%{opacity:0;transform:translateY(26px) rotate(260deg)}
+}
+
+/* ------------------------------------------------ card-corner eggs -- */
+[data-season="easter"] :is(.card, .sect-b):has(> .ea-pair){position:relative}
+[data-season="easter"] .ea-pair{position:absolute;right:2px;top:-2px;width:44px;height:30px;pointer-events:none}
+[data-season="easter"] .ea-pair-sm{width:32px;height:22px;top:2px}
+[data-season="easter"] .ea-pair .ea-egg{position:absolute;width:17px;height:21px}
+[data-season="easter"] .ea-ea{right:2px;top:0;animation:ea-rock 3.2s var(--ease) 2}
+[data-season="easter"] .ea-eb{right:16px;top:7px;width:13px !important;height:16px !important;opacity:.85;
+  animation:ea-rock 3.2s .5s var(--ease) 2}
+[data-season="easter"] .ea-hero .ea-pair .ea-ea{width:20px;height:25px}
+[data-season="easter"] .ea-hero .ea-pair .ea-eb{width:15px !important;height:19px !important}
+@keyframes ea-rock{0%,100%{rotate:0deg}25%{rotate:6deg}75%{rotate:-5deg}}
+
+/* The hero card also gets the bunny: two hops across, then it rests in the corner. */
+[data-season="easter"] .card:has(> .ea-hero){position:relative;overflow:hidden}
+[data-season="easter"] .ea-hero{position:absolute;inset:0;pointer-events:none;z-index:0}
+[data-season="easter"] .ea-bunny-run{position:absolute;width:40px;height:30px;opacity:0;
+  animation:ea-hop 9s var(--ease) 1 both}
+@keyframes ea-hop{
+  0%{transform:translateX(-50px);opacity:0}
+  6%{opacity:.9}
+  18%{transform:translateX(9%) translateY(-6px)}
+  22%{transform:translateX(14%) translateY(0)}
+  34%{transform:translateX(30%) translateY(-7px)}
+  38%{transform:translateX(35%) translateY(0)}
+  50%{transform:translateX(52%) translateY(-7px)}
+  54%{transform:translateX(57%) translateY(0)}
+  66%{transform:translateX(74%) translateY(-7px)}
+  70%{transform:translateX(79%) translateY(0)}
+  86%,100%{transform:translateX(88%);opacity:0}
+  88%{opacity:.9}
+  99%{opacity:.9}
+}
+
+/* -------------------------------------------------------- rest egg -- */
+[data-season="easter"] .ea-rest{position:absolute;right:14px;top:-20px;width:22px;height:28px;pointer-events:none;opacity:.9}
+[data-season="easter"] .ea-rest .ea-egg{width:100%;height:100%;animation:ea-rock 3.6s var(--ease) 2}
+
+/* ------------------------------------------------------ finish hunt -- */
+[data-season="easter"] .ea-finish{position:absolute;inset:auto 0 74px 0;height:0;pointer-events:none}
+[data-season="easter"] .ea-f{position:absolute;width:24px;height:30px;opacity:0;animation:ea-lift 2.6s var(--ease) 1 forwards}
+[data-season="easter"] .e0{left:14%;bottom:-12px}
+[data-season="easter"] .e1{left:46%;bottom:-22px;width:18px !important;height:22px !important;animation-delay:.4s}
+[data-season="easter"] .e1 .ea-shell{fill:var(--ea-3)}
+[data-season="easter"] .e2{right:12%;bottom:-8px;width:15px !important;height:19px !important;animation-delay:.8s}
+[data-season="easter"] .e2 .ea-shell{fill:var(--ea-2)}
+@keyframes ea-lift{
+  0%{opacity:0;transform:translateY(10px) scale(.7)}
+  30%{opacity:1;transform:translateY(0) scale(1.06)}
+  78%{opacity:.9;transform:translateY(0) scale(1)}
+  100%{opacity:0;transform:translateY(-10px) scale(1)}
+}
+
+/* The petal colors ride along with light themes via the tokens above; sizes settle here. */
+[data-season="easter"] .ea-still .ea-egg{animation:none}
+[data-season="easter"] .ea-still .ea-hero{display:none}
+
+@media (prefers-reduced-motion: reduce){
+  [data-season="easter"] .ea-petal{display:none}
+  [data-season="easter"] .ea-bunny-run{display:none}
+  [data-season="easter"] .ea-pair .ea-egg,[data-season="easter"] .ea-rest .ea-egg{animation:none}
+  [data-season="easter"] .ea-finish .ea-f{animation:none;opacity:.8}
+  [data-season="easter"] .e1,[data-season="easter"] .e2{opacity:.6}
+}

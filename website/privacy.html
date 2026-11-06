@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>GymShed: Privacy</title>
+<meta name="description" content="What the GymShed apps and this website do with your data: nothing leaves your phone unless you send it somewhere yourself.">
+<meta name="theme-color" content="#000000">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="preconnect" href="https://stats.gymshed.app">
+<meta property="og:title" content="GymShed privacy policy">
+<meta property="og:description" content="No account, no analytics, no ads in the app. Your training log stays on your phone.">
+<meta property="og:image" content="https://gymshed.app/img/social.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="GymShed: your training, your data, your server. Two phones showing the home and workout screens.">
+<meta property="og:url" content="https://gymshed.app/privacy.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GymShed">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GymShed privacy policy">
+<meta name="twitter:image" content="https://gymshed.app/img/social.jpg">
+<link rel="canonical" href="https://gymshed.app/privacy.html">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="96x96" href="/icon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="stylesheet" href="styles.css?v=29">
+<script>document.documentElement.className += ' js'</script>
+<!-- Umami web analytics for gymshed.app (self-hosted, cookieless). -->
+<script defer src="https://stats.gymshed.app/script.js" data-website-id="db36019e-50f4-453c-9c56-d0588aefe233"></script>
+</head>
+<body class="topnav">
+<a class="skip" href="#main">Skip to content</a>
+
+<nav><div class="wrap nav-in">
+  <a class="brand" href="/">
+    <img src="icon-180.png" alt="" width="24" height="24">
+    GymShed
+  </a>
+  <div class="nav-quick">
+    <a class="ql site" href="/#features">Features</a>
+    <a class="ql site" href="/#screens">Screenshots</a>
+    <a class="ql site" href="/#demo">Demo</a>
+    <a class="ql site" href="/docs.html">Docs</a>
+    <a class="ql site" href="/api.html">API</a>
+    <a class="ql site" href="/about.html">About</a>
+    <a class="ql" href="https://github.com/gymshed/GymShed" rel="noopener">GitHub <span data-gh="stars"></span></a>
+    <a class="ql" href="https://github.com/gymshed/GymShed/discussions" rel="noopener">Discussions</a>
+    <a class="cta" href="/#download">Download</a>
+  </div>
+  <button class="nav-toggle" id="navtoggle" aria-expanded="false" aria-controls="sitemenu" aria-label="Menu">
+    <span></span><span></span>
+  </button>
+</div></nav>
+
+<!-- The navigation sheet: the header's links again, for the widths where the bar has
+     room only for the brand and the download. Byte-identical on every page, like the
+     bar above it, so nothing is ever dropped because of which page you are on. -->
+<div class="navsheet" id="sitemenu" role="navigation" aria-label="Site" aria-hidden="true">
+  <div class="nl-rows">
+    <a class="nl" href="/#features">Features</a>
+    <a class="nl" href="/#screens">Screenshots</a>
+    <a class="nl" href="/#demo">Demo</a>
+    <a class="nl" href="/docs.html">Docs</a>
+    <a class="nl" href="/api.html">API</a>
+    <a class="nl" href="/about.html">About</a>
+    <a class="nl" href="https://github.com/gymshed/GymShed" rel="noopener">GitHub <span data-gh="stars"></span></a>
+    <a class="nl" href="https://github.com/gymshed/GymShed/discussions" rel="noopener">Discussions</a>
+  </div>
+</div>
+
+<!-- The one control that opens the contents, at every width. The drawer it opens is
+     closed in CSS, so it is shut on first paint whether or not the script runs. -->
+<button class="toc-btn" id="tocbtn" aria-expanded="false" aria-controls="menu">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6.5h16M4 12h16M4 17.5h10"/></svg>
+  Contents
+</button>
+
+<!-- The contents drawer: one list, one way in, one way out. Closed by default at
+     every width, and no preference is remembered. See .side in styles.css. -->
+<aside class="side" id="menu" aria-label="Contents" aria-hidden="true">
+  <div class="side-top">
+    <p class="side-title">Contents</p>
+    <button class="rail-close" aria-label="Close contents"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <p class="side-label">On this page</p>
+  <a class="side-link" href="#short"><b>The short version</b><span>Nothing leaves your phone on its own</span></a>
+  <a class="side-link" href="#online"><b>When the app goes online</b><span>Only for what you set up</span></a>
+  <a class="side-link" href="#stores"><b>App stores</b><span>Google Play and the App Store</span></a>
+  <a class="side-link" href="#website"><b>This website</b><span>Cookieless page counts</span></a>
+  <a class="side-link" href="#legal"><b>The legal part</b><span>Who, why, your rights</span></a>
+  <a class="side-link" href="#contact"><b>Questions</b><span>Who to ask</span></a>
+  <p class="side-label">More</p>
+  <a class="side-link" href="/"><b>Home</b><span>The tour, the demo, the download</span></a>
+  <a class="side-link" href="docs.html"><b>Docs</b><span>Install, self-host, import</span></a>
+  <a class="side-link" href="api.html"><b>API</b><span>Every route, as an OpenAPI spec</span></a>
+</aside>
+
+<main id="main" class="wrap prose">
+  <h1>Privacy</h1>
+  <p class="lead">This page covers the GymShed apps for Android and iPhone (the APK from this
+     site and GitHub, the Google Play and App Store versions) and this website.
+     Last changed: 31 October 2026.</p>
+
+  <h2 id="short">The short version</h2>
+  <ul>
+    <li><b>No account.</b> The app works without signing up anywhere.</li>
+    <li><b>No analytics, no ads, no crash reporting, no tracking.</b> Not in the app, not by us,
+        not by anyone we work with. There is nobody we work with.</li>
+    <li><b>Your training log stays on your phone.</b> Workouts, plans, body weight, photos, videos and
+        settings are stored in the app's own storage on your device. We never receive them.</li>
+    <li><b>You decide what leaves the phone</b>, and only these things can: a backup you export,
+        a server you connect, the AI coach if you set it up, Health Connect or Apple Health if you
+        switch them on, the address search of the gym reminder, and a YouTube video you tap to
+        watch.</li>
+  </ul>
+
+  <h2 id="online">When the app goes online</h2>
+  <p>Only for these, and only once you set them up:</p>
+  <ul>
+    <li><b>Your own server.</b> "Connect to my server" syncs your log with an GymShed server you
+        run or picked yourself. That server's operator, not us, is responsible for it; on your
+        own server, that's you.</li>
+    <li><b>The AI coach.</b> Optional and off until you set it up with an API key from an AI
+        provider of your choice (for example Anthropic, OpenAI or Google). Before the first
+        request it shows which data it sends (your training history, plan, goals and the
+        answers you gave it) and to which provider, and asks you. The request goes straight from
+        your phone to that provider, under your key and that provider's privacy policy. Your
+        name and other account details are never part of it. Using the coach of your own
+        server instead, the request goes through that server to the provider its admin picked,
+        and the app asks you about that provider the same way. Your answer is remembered on the
+        device for that provider only: switch providers and it asks again, and you can take it
+        back anytime in the coach's menu under AI data sharing. A model running on your own
+        network is not a third party, so nothing to ask there.</li>
+    <li><b>Health Connect</b> (Android) and <b>Apple Health</b> (iPhone). Each part has its own
+        switch, all off until you turn them on. Writing puts finished workouts and weigh-ins into
+        the health store on your phone. Reading (since v1.4.3) takes two things back: the heart
+        rate your watch saved during a workout you logged (from the last day, while the app is
+        open) and weigh-ins other apps saved (from the last 30 days; on Android up to a year back the first
+        time, if you also allow Health Connect's "past data" access). They go into your own
+        workout log on the phone and never leave it, except inside that log when you sync it to
+        your own server. Nothing is read in the background, nothing else is read, and no health
+        data goes to us or to anyone else. Health data is never sold, never used for advertising
+        and never used to decide anything about credit, insurance or work.</li>
+    <li><b>Apple Watch</b> (iPhone). During a workout the Apple Watch app reads your heart rate
+        to show it next to each set. The watch talks to your iPhone directly. Health data is never
+        sent to us and never used for advertising.</li>
+    <li><b>Wear OS watch</b> (Android, beta). The watch app and your phone talk through Google
+        Play services' Wearable Data Layer: directly over Bluetooth or Wi-Fi, or, when they are apart,
+        through Google's encrypted sync, under Google's privacy policy. During a workout the watch
+        reads your heart rate to show it next to each set and puts it into the workout on your phone.
+        Health data is never sent to us and never used for advertising.</li>
+    <li><b>Sharper animations</b> (store versions). A basic set of exercise animations comes
+        with the app. Sharper sets are optional downloads under Settings → Animation quality,
+        delivered by Google Play or Apple like the app itself (on Auto, only over Wi-Fi).</li>
+    <li><b>Missed-day reminder</b> (only with your own server connected). In the background the
+        app may ask your server whether you already trained today, so it doesn't nag you for
+        nothing.</li>
+    <li><b>YouTube videos</b>, only when you tap one. A YouTube link you put on an exercise you
+        added or in a routine's notes shows as a "Watch video" card, and nothing is loaded from
+        YouTube until you tap it. Then, on Android and in the browser, the video plays in the app
+        from youtube-nocookie.com, YouTube's privacy-enhanced player: Google (YouTube's owner) gets
+        your IP address and which video it is, and the player may keep a little data of its own on
+        the phone, under Google's privacy policy. On the iPhone the tap opens the video in YouTube
+        or Safari instead. The app never tells YouTube anything else about you or your training.</li>
+    <li><b>Update check</b> (only the APK from this site and GitHub). When you open Settings →
+        About, the app asks GitHub's public release list whether there is a newer version, and
+        downloads it from GitHub if you tap update. The store versions are updated by their store
+        and never do this.</li>
+  </ul>
+  <p>The built-in exercise animations are inside the app, so browsing exercises needs no connection.
+     The camera is used only when you scan your gym membership code or take a photo or video of
+     an exercise you add yourself; scanned images are read on the phone and never stored or
+     sent. Notifications (workout reminder, end of a rest) are scheduled on the phone itself.</p>
+  <p><b>Gym reminder</b> (phone app, off until you switch it on). Where your gyms are stays on your
+     phone: not synced, not in backups, not sent to us or to your server. The phone itself notices
+     when you walk in (Android's location service or iOS region monitoring), so nobody, us
+     included, learns where you go. We don't want to know, honestly. Two things do go out: what you
+     type into the map's search, and the map itself. On the iPhone the map is Apple Maps, so a search
+     (and the street address of a pin you drop) goes to Apple, like any search in Apple's Maps app.
+     On Android it is OpenStreetMap: a search goes to OpenStreetMap's Nominatim (just the text you
+     typed and the rough area the map shows, at most one request a second) and the map tiles come
+     from OpenStreetMap's tile servers (© OpenStreetMap contributors, under their tile usage
+     policy). "Open in Google Maps" sends the pin's spot to Google only when you tap it. And if the phone is connected to your own
+     server, it asks that server "trained today already?" when you arrive, so a workout logged on
+     your laptop doesn't get you nagged. That question carries the date, not your location.</p>
+  <p id="delete"><b>Deleting your data:</b> it's on your phone, so Settings → Reset or uninstalling the app
+     removes it. A backup file you exported is yours to keep or delete. On a server you
+     connected, Settings → Delete my account removes your profile there.</p>
+  <p>GymShed is not directed at children under 13.</p>
+
+  <h2 id="stores">App stores</h2>
+  <p>If you install GymShed from Google Play or the App Store, Google or Apple handle the
+     download and may collect data about it under their own privacy policies (for example
+     install counts or crash statistics you allowed them to share). We can see the aggregated
+     numbers they show developers; nothing that identifies you.</p>
+
+  <h2 id="website">This website</h2>
+  <p>gymshed.app counts page views with a self-hosted, cookieless
+     <a href="https://umami.is" rel="noopener">Umami</a>: no cookies, no cross-site tracking, no
+     personal profile. The demo runs entirely in your browser and is never counted.</p>
+
+  <h2 id="legal">The legal part</h2>
+  <p><b>Who is responsible.</b> Whichever operator hosts this instance for you - every self-hosted GymShed is the data controller of its own users. The upstream project, GymShed, <a href="https://github.com/gymshed/GymShed">github.com/gymshed/GymShed</a>,
+     is the controller under the Swiss Federal Act on Data Protection (FADP) and, where it applies,
+     the EU General Data Protection Regulation (GDPR). For the app that is a short job: your
+     training log is processed on your device, and the services you connect (your server, an AI
+     provider, Google or Apple) handle what you send them under their own terms.</p>
+  <p><b>What we do process, and why.</b></p>
+  <ul>
+    <li>This website: your IP address and the request, to deliver and protect the pages, and
+        anonymous page counts (see below). Legal basis: our legitimate interest in a working,
+        secure site and in knowing which pages are read (Art. 6(1)(f) GDPR).</li>
+    <li>Messages you send an instance operator by e-mail or on GitHub: to answer you. Legal basis: our
+        legitimate interest in answering, or the steps you asked for (Art. 6(1)(b) and (f) GDPR).
+        We keep a conversation only as long as it is useful for it, then delete it.</li>
+  </ul>
+  <p><b>Who helps.</b> The website runs on our own server in Switzerland behind
+     <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a>
+     (Cloudflare, Inc., USA), which receives your IP address to deliver the pages and keep attacks
+     out. Mail sent to an instance operator stays with whatever mailbox service they run. Where
+     data
+     goes to the USA, the transfer rests on the EU-US and Swiss-US Data Privacy Frameworks or the
+     EU standard contractual clauses. We sell no data and share none for advertising.</p>
+  <p><b>Health data.</b> Body weight, heart rate and workouts count as health data under the
+     FADP and the GDPR (Art. 9). GymShed keeps them on your device. They only leave it when you
+     switch something on yourself: sync with your own server, Apple Health or Health Connect, an
+     AI provider, or a watch. Switching it on is your explicit consent for exactly that
+     (Art. 9(2)(a) GDPR), and switching it off withdraws it. Nothing of it reaches us.</p>
+  <p><b>Age.</b> GymShed is meant for people aged 13 and over. We do not knowingly collect data
+     from children, and the app itself collects nothing for us at any age. If you are under 16 in
+     the EU (or under the age your country sets), ask a parent before you connect online services
+     such as an AI provider or a server you do not run yourself. If you think a child sent us
+     data, write to us and we delete it.</p>
+  <p><b>Your rights.</b> You can ask what we hold about you, have it corrected or deleted, restrict
+     or object to its processing, and get a copy to take elsewhere. Write to whoever operates the
+     instance you use; their contact details belong on their own site. You can also complain
+     to a data protection authority: in Switzerland the
+     <a href="https://www.edoeb.admin.ch" rel="noopener">Federal Data Protection and Information Commissioner (FDPIC)</a>,
+     in the EU the authority of the country you live in.</p>
+  <p><b>Changes.</b> When the app starts doing something new with data, this page changes first,
+     and the date at the top says when.</p>
+
+  <h2 id="contact">Questions</h2>
+  <p>GymShed is made by <a href="https://gymshed.app" rel="noopener">GymShed</a>,
+     Switzerland. Ask in <a href="https://github.com/gymshed/GymShed/discussions" rel="noopener">GitHub Discussions</a>.
+     For questions about the data on an instance, write to whoever runs it. The app is open
+     source, so everything on this page can be checked in
+     <a href="https://github.com/gymshed/GymShed" rel="noopener">its code</a>.</p>
+</main>
+
+<footer><div class="wrap foot">
+  <span class="c">GymShed · AGPL-3.0 · © 2026 <a href="https://gymshed.app" rel="noopener">GymShed</a></span>
+  <div class="links">
+    <a href="docs.html">Docs</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="https://github.com/gymshed/GymShed" rel="noopener">GitHub</a>
+    <a href="https://gitlab.com/gymshed/gymshed" rel="noopener">GitLab mirror</a>
+    <a href="https://github.com/gymshed/GymShed/discussions" rel="noopener">Discussions</a>
+    <a href="/#download">Download</a>
+  </div>
+</div></footer>
+
+<script src="site.js?v=29" defer></script>
+</body>
+</html>

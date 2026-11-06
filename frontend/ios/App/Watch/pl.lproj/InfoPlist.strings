@@ -1,0 +1,4 @@
+/* GymShed on the Apple Watch, pl: Info.plist. Written by ios/ci/watch-strings.mjs. */
+
+"NSHealthShareUsageDescription" = "GymShed pokazuje tętno podczas treningu i przy każdej serii.";
+"NSHealthUpdateUsageDescription" = "GymShed zapisuje treningi w Apple Zdrowie, jeśli to włączysz.";

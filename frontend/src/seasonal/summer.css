@@ -1,0 +1,64 @@
+/* Summer decoration (seasonal/summer.jsx). Loaded only while the theme shows, and scoped to
+   :root[data-season="summer"] so switching it off mid-session leaves nothing behind.
+   Transforms and opacity only; every animation runs a fixed number of times and stops. */
+
+:root[data-season="summer"]{ --su-warm:#ffb340; --su-ray:rgba(255,179,64,.8); --su-body:#3b2f1e; --su-wing:rgba(235,235,245,.65) }
+:root[data-season="summer"][data-theme="light"],
+:root[data-season="summer"][data-theme="sepia"]{ --su-warm:#e8930c; --su-ray:rgba(232,147,12,.75); --su-body:#4a3a22; --su-wing:rgba(60,60,67,.4) }
+
+[data-season="summer"] .su-sun{display:block}
+[data-season="summer"] .su-ray{stroke:var(--su-ray);stroke-width:2;stroke-linecap:round}
+[data-season="summer"] .su-disc{fill:var(--su-warm)}
+[data-season="summer"] .su-smile,[data-season="summer"] .su-eye{fill:none;stroke:var(--su-body);stroke-width:1.6;stroke-linecap:round}
+[data-season="summer"] .su-eye{fill:var(--su-body);stroke:none}
+[data-season="summer"] .su-bee{display:block}
+[data-season="summer"] .su-body{fill:#f6c945}
+[data-season="summer"] .su-stripe{stroke:var(--su-body);stroke-width:1.7;stroke-linecap:round}
+[data-season="summer"] .su-wing{fill:var(--su-wing)}
+[data-season="summer"] .su-eyeb{fill:var(--su-body)}
+
+/* ------------------------------------------------------ hero beam -- */
+[data-season="summer"] .card:has(> .su-beam){position:relative}
+[data-season="summer"] .su-beam{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+[data-season="summer"] .su-beam::before{content:"";position:absolute;left:-30%;top:-160%;width:90%;height:340%;
+  background:linear-gradient(var(--su-tilt,105deg),rgba(255,179,64,.16),rgba(255,179,64,0) 62%);
+  transform:rotate(0.001deg);opacity:.9}
+[data-season="summer"] .su-beamsun{position:absolute;right:6px;top:-10px;width:52px;height:52px;opacity:.9;
+  animation:su-turn 14s linear 1}
+[data-season="summer"] .su-bee-hero{position:absolute;left:-34px;bottom:8px;width:28px;height:20px;opacity:0;
+  animation:su-cross 11s var(--ease) 1 both}
+
+[data-season="summer"][dir="rtl"] .su-beam::before{background:linear-gradient(255deg,rgba(255,179,64,.16),rgba(255,179,64,0) 62%)}
+
+/* ------------------------------------------------- headers + minis -- */
+[data-season="summer"] .hdr:has(> .su-hdrsun){position:relative}
+[data-season="summer"] .hdr:has(> .su-hdrsun) > :not(.su-hdrsun){position:relative;z-index:1}
+[data-season="summer"] .su-hdrsun{position:absolute;right:-4px;top:-8px;width:46px;height:46px;pointer-events:none;z-index:0;opacity:.9;
+  animation:su-turn 16s linear 1}
+[data-season="summer"] .su-mini{position:absolute;right:2px;top:-6px;width:30px;height:30px;pointer-events:none;opacity:.8}
+[data-season="summer"] .su-mini .su-sun{width:100%;height:100%;animation:su-turn 16s linear 1}
+[data-season="summer"] .su-finish{position:absolute;right:0;top:-70px;width:56px;height:56px;pointer-events:none}
+[data-season="summer"] .su-finish .su-sun{width:100%;height:100%;
+  animation:su-turn 12s linear 1, su-halo 3s var(--ease) 2}
+[data-season="summer"] .su-still .su-sun{animation:none}
+
+/* --------------------------------------------------------- rest bar -- */
+[data-season="summer"] .su-rest{position:absolute;left:0;right:0;top:-22px;height:22px;pointer-events:none}
+[data-season="summer"] .su-rest .su-bee{position:absolute;width:24px;height:17px;opacity:0}
+[data-season="summer"] .su-r0{left:-30px;top:0;animation:su-cross 9s var(--ease) 1 both}
+[data-season="summer"] .su-r1{right:-30px;top:8px;transform:scaleX(-1);animation:su-cross-rtl 10s 4.5s var(--ease) 1 both}
+[data-season="summer"] .su-rest .su-wing{animation:su-flutter .25s ease-in-out 34 alternate}
+@keyframes su-turn{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes su-halo{0%,100%{opacity:.85;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+@keyframes su-cross{0%{transform:translateX(0);opacity:0}7%,86%{opacity:.95}100%{transform:translateX(calc(100vw + 30px));opacity:0}}
+@keyframes su-cross-rtl{0%{transform:scaleX(-1) translateX(0);opacity:0}7%,86%{opacity:.95}100%{transform:scaleX(-1) translateX(calc(100vw + 30px));opacity:0}}
+@keyframes su-flutter{from{transform:scaleY(1)}to{transform:scaleY(.5)}}
+
+@media (prefers-reduced-motion: reduce){
+  [data-season="summer"] .su-hdrsun,[data-season="summer"] .su-mini .su-sun,
+  [data-season="summer"] .su-beamsun,[data-season="summer"] .su-finish .su-sun{animation:none}
+  [data-season="summer"] .su-rest{display:none}
+  [data-season="summer"] .su-bee-hero{display:none}
+  [data-season="summer"] .su-finish .su-sun{opacity:.9}
+  [data-season="summer"] .su-beam::before{opacity:.6}
+}

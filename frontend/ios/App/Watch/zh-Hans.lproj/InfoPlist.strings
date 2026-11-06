@@ -1,0 +1,4 @@
+/* GymShed on the Apple Watch, zh-Hans: Info.plist. Written by ios/ci/watch-strings.mjs. */
+
+"NSHealthShareUsageDescription" = "GymShed 会在训练中和每组旁显示你的心率。";
+"NSHealthUpdateUsageDescription" = "打开后，GymShed 会把训练保存到 Apple 健康。";

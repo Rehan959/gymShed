@@ -1,0 +1,86 @@
+/* Pride decoration (seasonal/pride.jsx). Loaded only while the theme shows, and scoped to
+   :root[data-season="pride"] so switching it off mid-session leaves nothing behind.
+   Transforms and opacity only; every animation runs a fixed number of times and stops. */
+
+:root[data-season="pride"]{
+  --pr-r:#e5484d; --pr-o:#f76b15; --pr-y:#ffb224;
+  --pr-g:#46a758; --pr-b:#0090ff; --pr-v:#8e4ec6;
+  --pr-mast:rgba(235,235,245,.55);
+}
+:root[data-season="pride"][data-theme="light"],
+:root[data-season="pride"][data-theme="sepia"]{
+  --pr-r:#c2272c; --pr-o:#d05306; --pr-y:#b45309;
+  --pr-g:#2f7a3e; --pr-b:#0072d6; --pr-v:#7b3ba8;
+  --pr-mast:rgba(60,60,67,.45);
+}
+
+/* The bands are shared between the ribbon and the flag. */
+[data-season="pride"] .pr-band{fill:none}
+[data-season="pride"] .pr-flag{display:block}
+[data-season="pride"] .pr-flag .pr-band{fill:currentColor;stroke:none}
+[data-season="pride"] .pr-r{color:var(--pr-r)}[data-season="pride"] .pr-o{color:var(--pr-o)}
+[data-season="pride"] .pr-y{color:var(--pr-y)}[data-season="pride"] .pr-g{color:var(--pr-g)}
+[data-season="pride"] .pr-b{color:var(--pr-b)}[data-season="pride"] .pr-v{color:var(--pr-v)}
+[data-season="pride"] .pr-mast{fill:var(--pr-mast)}
+
+/* ------------------------------------------------------------ ribbon -- */
+[data-season="pride"] .hdr:has(> .pr-hribbon){position:relative;overflow:hidden}
+[data-season="pride"] .hdr:has(> .pr-hribbon) > :not(.pr-hribbon){position:relative;z-index:1}
+[data-season="pride"] .pr-hribbon{position:absolute;left:0;right:0;bottom:-4px;height:30px;pointer-events:none;z-index:0}
+[data-season="pride"] .pr-ribbon{display:block;width:100%;height:26px;stroke-width:2.6;stroke-linecap:round;
+  position:absolute;left:0;bottom:0;overflow:visible}
+[data-season="pride"] .pr-ribbon .pr-r{stroke:var(--pr-r)}[data-season="pride"] .pr-ribbon .pr-o{stroke:var(--pr-o)}
+[data-season="pride"] .pr-ribbon .pr-y{stroke:var(--pr-y)}[data-season="pride"] .pr-ribbon .pr-g{stroke:var(--pr-g)}
+[data-season="pride"] .pr-ribbon .pr-b{stroke:var(--pr-b)}[data-season="pride"] .pr-ribbon .pr-v{stroke:var(--pr-v)}
+[data-season="pride"] .pr-still .pr-ribbon{opacity:.55}
+
+/* ------------------------------------------------------ confetti -- */
+[data-season="pride"] .pr-fall{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+[data-season="pride"] .pr-tab{position:absolute;top:-16px;width:9px;height:13px;opacity:0;animation:pr-fall 7s var(--ease) 1 both}
+[data-season="pride"] .pr-t0{left:12%;fill:var(--pr-r);animation-delay:.6s}
+[data-season="pride"] .pr-t1{left:30%;fill:var(--pr-o);animation-delay:1.9s;animation-duration:8s}
+[data-season="pride"] .pr-t2{left:47%;fill:var(--pr-y);animation-delay:3.2s}
+[data-season="pride"] .pr-t3{left:63%;fill:var(--pr-g);animation-delay:4.4s;animation-duration:9s}
+[data-season="pride"] .pr-t4{left:79%;fill:var(--pr-b);animation-delay:5.6s}
+[data-season="pride"] .pr-t5{left:90%;fill:var(--pr-v);animation-delay:6.4s;animation-duration:6s}
+@keyframes pr-fall{
+  0%{opacity:0;transform:translateY(0) rotate(0)}
+  12%{opacity:.9}
+  85%{opacity:.9}
+  100%{opacity:0;transform:translateY(240%) rotate(230deg)}
+}
+
+/* ------------------------------------------------ card-corner ribbon -- */
+[data-season="pride"] .card:has(> .pr-heribbon){position:relative;overflow:hidden}
+[data-season="pride"] .pr-heribbon{position:absolute;left:0;right:0;bottom:-2px;height:22px;pointer-events:none;z-index:0}
+[data-season="pride"] .pr-heribbon .pr-ribbon{height:22px}
+
+/* --------------------------------------------------------- mini flag -- */
+[data-season="pride"] .pr-mini{position:absolute;right:2px;top:-8px;width:26px;height:30px;pointer-events:none;opacity:.85}
+[data-season="pride"] .pr-mini .pr-flag{width:24px;height:27px}
+[data-season="pride"] .pr-sway{transform-origin:6px 2px;animation:pr-sway 3.4s var(--ease) 2}
+@keyframes pr-sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(5deg)}}
+
+/* --------------------------------------------------------- rest bar -- */
+[data-season="pride"] .pr-rest{position:absolute;left:0;right:0;bottom:-6px;height:16px;pointer-events:none}
+[data-season="pride"] .pr-rest .pr-ribbon{height:16px;opacity:.5}
+
+/* ------------------------------------------------------ finish line -- */
+[data-season="pride"] .pr-finish{position:absolute;inset:auto 0 68px 0;height:0;pointer-events:none}
+[data-season="pride"] .pr-f-flag{position:absolute;left:50%;bottom:-64px;width:34px;height:38px;margin-left:-17px;
+  animation:pr-sway 3.4s var(--ease) 2}
+[data-season="pride"] .pr-conf-fin{position:absolute;inset:auto 0 -190px 0;height:190px;opacity:.85}
+[data-season="pride"] .pr-conf-hero{top:-30%;height:120%}
+[data-season="pride"] .pr-conf-hdr{inset:0}
+[data-season="pride"] .pr-corner{position:absolute;left:12px;bottom:64px;width:34px;height:38px;pointer-events:none;opacity:.9}
+[data-season="pride"] .pr-corner .pr-flag{width:32px;height:36px}
+[data-season="pride"] .pr-corner .pr-flag .pr-band{animation:pr-sway 3.4s var(--ease) 2}
+[data-season="pride"] .pr-conf-fin .pr-tab{animation-duration:5s}
+
+@media (prefers-reduced-motion: reduce){
+  [data-season="pride"] .pr-tab{display:none}
+  [data-season="pride"] .pr-sway,
+  [data-season="pride"] .pr-corner .pr-flag .pr-band,
+  [data-season="pride"] .pr-f-flag{animation:none}
+  [data-season="pride"] .pr-ribbon,[data-season="pride"] .pr-flag{opacity:.75}
+}

@@ -1,0 +1,130 @@
+{
+  "configVersion": "v3",
+  "app": {
+    "appId": 9990145,
+    "appName": "GymShed",
+    "appType": "app",
+    "version": {
+      "code": 10404,
+      "name": "1.4.4"
+    },
+    "icon": "icon.png",
+    "vender": "GymShed",
+    "description": "GymShed on your wrist: start a routine, log sets with the crown, rest with a ring. Pairs with your own GymShed server."
+  },
+  "permissions": [
+    "data:os.device.info",
+    "device:os.local_storage",
+    "data:user.hd.heart_rate"
+  ],
+  "runtime": {
+    "apiVersion": {
+      "compatible": "3.0",
+      "target": "3.0",
+      "minVersion": "3.0"
+    }
+  },
+  "debug": false,
+  "targets": {
+    "common": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/index"
+          ]
+        },
+        "app-widget": {
+          "widgets": [
+            {
+              "path": "app-widget/index",
+              "icon": "icon.png",
+              "name": "GymShed",
+              "runtime": {
+                "type": "js"
+              }
+            }
+          ]
+        },
+        "app-side": {
+          "path": "app-side/index"
+        },
+        "setting": {
+          "path": "setting/index"
+        }
+      },
+      "platforms": [
+        {
+          "st": "r",
+          "dw": 480
+        },
+        {
+          "st": "s",
+          "dw": 390
+        }
+      ]
+    }
+  },
+  "i18n": {
+    "en-US": {
+      "appName": "GymShed"
+    },
+    "de-DE": {
+      "appName": "GymShed"
+    },
+    "fr-FR": {
+      "appName": "GymShed"
+    },
+    "es-ES": {
+      "appName": "GymShed"
+    },
+    "it-IT": {
+      "appName": "GymShed"
+    },
+    "pt-PT": {
+      "appName": "GymShed"
+    },
+    "pt-BR": {
+      "appName": "GymShed"
+    },
+    "pl-PL": {
+      "appName": "GymShed"
+    },
+    "hu-HU": {
+      "appName": "GymShed"
+    },
+    "tr-TR": {
+      "appName": "GymShed"
+    },
+    "ru-RU": {
+      "appName": "GymShed"
+    },
+    "uk-UA": {
+      "appName": "GymShed"
+    },
+    "ar-EG": {
+      "appName": "GymShed"
+    },
+    "hi-IN": {
+      "appName": "GymShed"
+    },
+    "bn-BD": {
+      "appName": "GymShed"
+    },
+    "th-TH": {
+      "appName": "GymShed"
+    },
+    "ko-KR": {
+      "appName": "GymShed"
+    },
+    "sv-SE": {
+      "appName": "GymShed"
+    },
+    "zh-CN": {
+      "appName": "GymShed"
+    },
+    "zh-TW": {
+      "appName": "GymShed"
+    }
+  },
+  "defaultLanguage": "en-US"
+}

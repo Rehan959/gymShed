@@ -1,0 +1,4 @@
+/* GymShed on the Apple Watch, hi: Info.plist. Written by ios/ci/watch-strings.mjs. */
+
+"NSHealthShareUsageDescription" = "GymShed वर्कआउट के दौरान और हर सेट के साथ आपकी धड़कन दिखाता है।";
+"NSHealthUpdateUsageDescription" = "चालू करने पर GymShed आपके वर्कआउट Apple Health में सहेजता है।";

@@ -1,0 +1,66 @@
+/* Valentine decoration (seasonal/valentine.jsx). Loaded only while the theme shows, and scoped
+   to :root[data-season="valentine"] so switching it off mid-session leaves nothing behind.
+   Transforms and opacity only; every animation runs a fixed number of times and stops. */
+
+:root[data-season="valentine"]{ --vl-ink:#ff4f7f; --vl-soft:#d12d5c }
+:root[data-season="valentine"][data-theme="light"],
+:root[data-season="valentine"][data-theme="sepia"]{ --vl-ink:#d12d5c; --vl-soft:#b02551 }
+
+[data-season="valentine"] .vl-heart{display:block;fill:var(--vl-ink)}
+
+/* ------------------------------------------------------------ headers -- */
+[data-season="valentine"] .hdr:has(> .vl-bursts){position:relative}
+[data-season="valentine"] .hdr:has(> .vl-bursts) > :not(.vl-bursts){position:relative;z-index:1}
+[data-season="valentine"] .vl-bursts{position:absolute;inset:-8px 0 -6px;overflow:hidden;pointer-events:none;z-index:0}
+[data-season="valentine"] .vl-bursts .vl-lane{position:absolute;left:-34px;width:22px;height:20px;opacity:0;
+  animation:vl-cross 9s var(--ease) 1 both}
+[data-season="valentine"] .vl-hl0{top:6px;animation-delay:1.4s}
+[data-season="valentine"] .vl-hl1{top:24px;animation-delay:4.6s;animation-duration:11s}
+[data-season="valentine"] .vl-hl1 .vl-heart{width:14px;height:13px;opacity:.75}
+[data-season="valentine"] .vl-hl2{top:2px;animation-delay:7.8s;animation-duration:13s}
+[data-season="valentine"] .vl-hl2 .vl-heart{width:11px;height:10px;opacity:.55}
+@keyframes vl-cross{
+  0%{transform:translateX(0);opacity:0}
+  8%,85%{opacity:.85}
+  100%{transform:translateX(calc(100vw + 4px));opacity:0}
+}
+
+/* ------------------------------------------------------ card corners -- */
+[data-season="valentine"] :is(.card, .sect-b):has(> .vl-pair){position:relative}
+[data-season="valentine"] .vl-pair{position:absolute;right:2px;top:-4px;width:44px;height:34px;pointer-events:none;
+  animation:vl-huddle 2.8s var(--ease) 3}
+[data-season="valentine"] .vl-pair-sm{width:32px;height:26px;top:0;right:4px}
+[data-season="valentine"] .vl-pair .vl-heart{position:absolute}
+[data-season="valentine"] .vl-pair .vl-a{left:0;top:4px;width:18px;height:16px}
+[data-season="valentine"] .vl-pair .vl-b{right:0;top:0;width:13px;height:12px;opacity:.72;fill:var(--vl-soft)}
+@keyframes vl-huddle{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+
+/* ------------------------------------------------------ rest timer -- */
+[data-season="valentine"] .vl-rest{position:absolute;left:0;right:0;top:-24px;height:24px;pointer-events:none}
+[data-season="valentine"] .vl-rest .vl-lane{position:absolute;left:-26px;top:0;width:15px;height:14px;opacity:0;
+  animation:vl-cross 7s var(--ease) 1 both}
+[data-season="valentine"] .vl-rl0{animation-delay:.4s}
+[data-season="valentine"] .vl-rl1{top:8px;animation-delay:3.4s;animation-duration:8s}
+[data-season="valentine"] .vl-rl1 .vl-heart{width:11px;height:10px;opacity:.7}
+
+/* ------------------------------------------------------ finish line -- */
+[data-season="valentine"] .vl-finish{position:absolute;inset:auto 0 76px 0;height:0;pointer-events:none}
+[data-season="valentine"] .vl-finish .vl-heart{position:absolute;opacity:0;animation:vl-appear 1.6s var(--ease) 1 forwards}
+[data-season="valentine"] .vl-f0{left:12%;bottom:-10px;width:26px;height:24px}
+[data-season="valentine"] .vl-f1{left:44%;bottom:-24px;width:19px;height:17px;animation-delay:.4s}
+[data-season="valentine"] .vl-f2{right:10%;bottom:-6px;width:15px;height:14px;opacity:.75;animation-delay:.8s}
+@keyframes vl-appear{
+  0%{opacity:0;transform:scale(.5) translateY(8px)}
+  30%{opacity:1;transform:scale(1.05) translateY(0)}
+  80%{opacity:.9}
+  100%{opacity:0;transform:scale(1) translateY(-10px)}
+}
+
+@media (prefers-reduced-motion: reduce){
+  [data-season="valentine"] .vl-bursts .vl-lane,
+  [data-season="valentine"] .vl-rest .vl-lane{animation:none;opacity:0}
+  [data-season="valentine"] .vl-bursts .vl-hl0 .vl-heart{opacity:.6}
+  [data-season="valentine"] .vl-pair{animation:none}
+  [data-season="valentine"] .vl-finish .vl-heart{animation:none;opacity:.8;transform:none}
+  [data-season="valentine"] .vl-f1,[data-season="valentine"] .vl-f2{opacity:.6}
+}

@@ -1,0 +1,4 @@
+/* GymShed on the Apple Watch, fr: Info.plist. Written by ios/ci/watch-strings.mjs. */
+
+"NSHealthShareUsageDescription" = "GymShed affiche ton pouls pendant la séance et à côté de chaque série.";
+"NSHealthUpdateUsageDescription" = "GymShed enregistre tes séances dans Apple Santé si tu l’actives.";
