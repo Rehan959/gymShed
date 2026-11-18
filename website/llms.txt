@@ -1,0 +1,21 @@
+# gymShed
+
+> Free, open-source gym & body-weight tracker (AGPL-3.0). Runs as a standalone
+> Android app (sideloaded APK) or self-hosted with Docker (passkey profiles,
+> multi-device sync, PWA). No account required, no cloud, no telemetry.
+
+## Docs
+- [HTTP API](https://opengym.ch/api.html): OpenAPI spec, also at [openapi.yaml](https://opengym.ch/openapi.yaml)
+
+## Try & get it
+- [Live demo](https://opengym.ch/demo/): the real app with example data, in the browser
+- [Android APK](https://play.google.com/apps/testing/ch.duartesantos.opengym): in closed testing on Google Play; sideloaded builds are signed and come in three sizes
+- [iPhone and Apple Watch](https://apps.apple.com/app/id6822275400): the App Store app
+- [Garmin watch app](https://apps.garmin.com/apps/62e66310-66de-4bdd-8e40-5d2c0d853a08): in the Connect IQ Store, needs gymShed 1.4.5 or later on the phone
+- [About](https://opengym.ch/about.html): the story and every release
+
+## How it is built
+- Developed with Claude Code (Anthropic's coding agent); changes are reviewed, tested and released by the maintainer. The app itself needs no AI service; the AI coach and MCP server are optional.
+
+## Source & community
+- [Discord](https://discord.gg/e62jY6fwVb): release announcements and self-hosting help

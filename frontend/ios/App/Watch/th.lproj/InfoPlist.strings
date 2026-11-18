@@ -1,0 +1,4 @@
+/* gymShed on the Apple Watch, th: Info.plist. Written by ios/ci/watch-strings.mjs. */
+
+"NSHealthShareUsageDescription" = "gymShed แสดงอัตราการเต้นของหัวใจระหว่างออกกำลังกายและข้างแต่ละเซ็ต และใช้วันเกิดของคุณสำหรับโซนหัวใจ";
+"NSHealthUpdateUsageDescription" = "gymShed บันทึกการฝึกลงใน Apple Health เมื่อคุณเปิดใช้";

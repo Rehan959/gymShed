@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- gymShed Offline sits next to the normal app on the home screen: its own name. -->
+    <string name="app_name">gymShed Offline</string>
+    <string name="title_activity_main">gymShed Offline</string>
+</resources>

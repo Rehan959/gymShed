@@ -1,0 +1,4 @@
+/* gymShed on the Apple Watch, de: Info.plist. Written by ios/ci/watch-strings.mjs. */
+
+"NSHealthShareUsageDescription" = "gymShed zeigt deinen Puls während des Trainings und neben jedem Satz und nutzt dein Geburtsdatum für die Pulszonen.";
+"NSHealthUpdateUsageDescription" = "gymShed speichert deine Trainings in Apple Health, wenn du das einschaltest.";

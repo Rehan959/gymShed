@@ -1,0 +1,4 @@
+/* gymShed on the Apple Watch, pt-PT: Info.plist. Written by ios/ci/watch-strings.mjs. */
+
+"NSHealthShareUsageDescription" = "O gymShed mostra a tua frequência cardíaca durante o treino e junto a cada série, e usa a tua data de nascimento para as zonas cardíacas.";
+"NSHealthUpdateUsageDescription" = "O gymShed guarda os teus treinos no Apple Saúde se o ativares.";

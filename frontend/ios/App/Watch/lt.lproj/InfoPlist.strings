@@ -1,0 +1,4 @@
+/* gymShed on the Apple Watch, lt: Info.plist. Written by ios/ci/watch-strings.mjs. */
+
+"NSHealthShareUsageDescription" = "gymShed rodo tavo pulsą treniruotės metu ir prie kiekvienos serijos, o pulso zonoms naudoja tavo gimimo datą.";
+"NSHealthUpdateUsageDescription" = "Jei įjungsite, „gymShed“ išsaugos jūsų treniruotes „Apple Health“.";

@@ -1,0 +1,4 @@
+/* gymShed on the Apple Watch, hu: Info.plist. Written by ios/ci/watch-strings.mjs. */
+
+"NSHealthShareUsageDescription" = "Az gymShed edzés közben és minden sorozat mellett mutatja a pulzusodat, a pulzuszónákhoz pedig a születési dátumodat használja.";
+"NSHealthUpdateUsageDescription" = "Az gymShed az Apple Egészség appba menti az edzéseidet, ha bekapcsolod.";

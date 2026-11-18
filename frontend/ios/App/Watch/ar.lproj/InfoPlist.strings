@@ -1,0 +1,4 @@
+/* gymShed on the Apple Watch, ar: Info.plist. Written by ios/ci/watch-strings.mjs. */
+
+"NSHealthShareUsageDescription" = "يعرض gymShed نبضك أثناء التمرين وبجانب كل مجموعة، ويستخدم تاريخ ميلادك لنطاقات النبض.";
+"NSHealthUpdateUsageDescription" = "يحفظ gymShed تمارينك في Apple صحتي إذا فعّلت ذلك.";

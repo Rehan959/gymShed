@@ -1,0 +1,4 @@
+/* gymShed on the Apple Watch, bn: Info.plist. Written by ios/ci/watch-strings.mjs. */
+
+"NSHealthShareUsageDescription" = "gymShed ওয়ার্কআউটের সময় এবং প্রতিটি সেটের পাশে তোমার হার্ট রেট দেখায়, এবং হার্ট রেট জোনের জন্য তোমার জন্মতারিখ ব্যবহার করে।";
+"NSHealthUpdateUsageDescription" = "চালু করলে gymShed আপনার ওয়ার্কআউট Apple Health-এ সেভ করে।";

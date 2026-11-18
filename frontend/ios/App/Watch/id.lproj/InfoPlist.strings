@@ -1,0 +1,4 @@
+/* gymShed on the Apple Watch, id: Info.plist. Written by ios/ci/watch-strings.mjs. */
+
+"NSHealthShareUsageDescription" = "gymShed menampilkan detak jantungmu selama latihan dan di samping setiap set, dan memakai tanggal lahirmu untuk zona detak jantung.";
+"NSHealthUpdateUsageDescription" = "gymShed menyimpan latihanmu ke Apple Kesehatan jika kamu menyalakannya.";

@@ -1,0 +1,4 @@
+/* gymShed on the Apple Watch, tr: Info.plist. Written by ios/ci/watch-strings.mjs. */
+
+"NSHealthShareUsageDescription" = "gymShed antrenman sırasında ve her setin yanında nabzını gösterir, nabız bölgeleri için doğum tarihini kullanır.";
+"NSHealthUpdateUsageDescription" = "Açarsan gymShed antrenmanlarını Apple Sağlık’a kaydeder.";

@@ -1,0 +1,4 @@
+/* gymShed on the Apple Watch, ko: Info.plist. Written by ios/ci/watch-strings.mjs. */
+
+"NSHealthShareUsageDescription" = "gymShed은 운동 중과 각 세트 옆에 심박수를 보여 주고, 심박수 구간에 생년월일을 사용합니다.";
+"NSHealthUpdateUsageDescription" = "켜면 gymShed이 운동을 Apple 건강에 저장해요.";
